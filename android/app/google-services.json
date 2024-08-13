@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "12342591285",
+    "project_id": "ultrasound-735cc",
+    "storage_bucket": "ultrasound-735cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12342591285:android:219bd2fd86258608e9d67c",
+        "android_client_info": {
+          "package_name": "com.example.ultrasound"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12342591285-h3lf2fa8dd69ung6i51gbee5tso0ktmk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrI2DRFdjiosVP4e_rVE8TXxb3X49rg8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12342591285-h3lf2fa8dd69ung6i51gbee5tso0ktmk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
