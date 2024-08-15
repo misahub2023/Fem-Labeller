@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -29,17 +26,17 @@ class DefaultFirebaseOptions {
         return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
+          'DefaultFirebaseOptions have not been configured for macOS - '
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.windows:
         throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
+          'DefaultFirebaseOptions have not been configured for Windows - '
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.linux:
         throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for linux - '
+          'DefaultFirebaseOptions have not been configured for Linux - '
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
       default:
@@ -49,21 +46,31 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'your-web-api-key',
+    appId: 'your-web-app-id',
+    messagingSenderId: 'your-web-messaging-sender-id',
+    projectId: 'your-web-project-id',
+    authDomain: 'your-web-auth-domain',
+    storageBucket: 'your-web-storage-bucket',
+    measurementId: 'your-web-measurement-id',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDrI2DRFdjiosVP4e_rVE8TXxb3X49rg8g',
-    appId: '1:12342591285:android:219bd2fd86258608e9d67c',
-    messagingSenderId: '12342591285',
-    projectId: 'ultrasound-735cc',
-    storageBucket: 'ultrasound-735cc.appspot.com',
+    apiKey: 'your-android-api-key',
+    appId: 'your-android-app-id',
+    messagingSenderId: 'your-android-messaging-sender-id',
+    projectId: 'your-android-project-id',
+    storageBucket: 'your-android-storage-bucket',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyATRxd3JNjFn5vwnLF2EDafnJ8p-kIXA2o',
-    appId: '1:12342591285:ios:41e1bbcacc3f714ce9d67c',
-    messagingSenderId: '12342591285',
-    projectId: 'ultrasound-735cc',
-    storageBucket: 'ultrasound-735cc.appspot.com',
-    iosClientId: '12342591285-rv6ji56fp8pvt54e8smkl5gpfuvnsnb6.apps.googleusercontent.com',
-    iosBundleId: 'com.example.ultrasound',
+    apiKey: 'your-ios-api-key',
+    appId: 'your-ios-app-id',
+    messagingSenderId: 'your-ios-messaging-sender-id',
+    projectId: 'your-ios-project-id',
+    storageBucket: 'your-ios-storage-bucket',
+    iosClientId: 'your-ios-client-id',
+    iosBundleId: 'your-ios-bundle-id',
   );
 }
