@@ -1,11 +1,20 @@
 # Fem-Labeller Flutter Application
 
 ## Project Overview
+The FEM Labeller application is a simple and user-friendly tool designed for gynecologists to label ultrasound frames efficiently. Its primary objective is to collect medically validated ultrasound data of the female reproductive system to develop AI models for detecting abnormalities. By automating the annotation process in real-time, the application saves time and generates a large, annotated dataset, facilitating the development of robust AI models for abnormality detection in both routine and clinical settings.
 
+The application consisted of a secure login system, profle setup, and the labeller module. 
+
+For each ultrasound frame, there are 3 questions i.e., whether the ultrasound has an abnormality or not, what label(s) can be given to the frame and lastly what all organs are visible in that frame. For each of the question, multiple options were given to the users where-in the first question was single choice while other two are multi choice.
+
+In the first question, the two options were: `healthy` , `has an abnormality`. 
+The second question had thirty four options that were `Round and Thin walled with posterior enhancement`, `Cumulus oophorous`, `Corpus luteum`, `Hemorrhagic ovarian cyst`, `Hemorrhagic corpus luteum`, `Endometrioma`, `Serous cystadenoma`, `Serous cystadenocarcinoma`, `Mucinous cystadenoma`, `Mucinous cystadenocarcinoma`, `Dermoid cyst`, `Dermoid plug`, `Rokitansky nodule`, `Dermoid mesh`, `Dot dash pattern`, `Floating balls sign`, `Ovarian fibroma`, `Ovarian thecoma`, `Metastasis`, `Para ovarian cyst`, `Polycystic ovary`, `Ovarian hyperstimulation syndrome`, `Ovarian torsion`, `Thick hyperechoic margin`, `Vaginal ultrasound`, `Right ovary`, `Transvaginal ultrasound`, `Gestational sac`, `Foetus`, `Chocolate cyst`, `Cervix`, `Urinary bladder`, `Polyp`, `Cervical cyst`. In third question, four option were given namely, `Adnexa`, `Vagina`, `Ovary`, `Uterus`. Additionally, there is a fourth question where the user can input any other comment related to the frame.
+
+In the back-end, time taken to analyse each frame is recorded and for each selection in any of questions, a numeric ‘1’ is assigned. Rest of the non-selected options were assigned a numeric ‘0’. In this manner, each ultrasound frame were assigned different labels and values for different values of total 40 options. This assignment was done by the inspiration of one-hot encoding method. It is a method used to convert categorical values to binary value of ‘0’ or ‘1’. All this data was saved in real-time in the form of an excel sheet at the application’s back-end. The sheet stores were—**(1) option selected for each of the question(multiples options for question 2 and 3), (2) any comment added by user, (3) time taken for complete analysis of frame, and (4) email ID.**
 
 
 ## FEM Labeller Application Manual
-The **AI-KODA Score Application Manual** is a comprehensive guide designed to help users understand the functionality of the FEM-Labeller app. It provides detailed instructions on how to navigate the app, use its various features, and effectively score label utrasound frames. The manual is essential for both new users and those looking to maximize the app's potential. To access the manual, please refer to the documentation included in the repository by the same name.
+The **FEM Labeller Application Manual** is a comprehensive guide designed to help users understand the functionality of the FEM-Labeller app. It provides detailed instructions on how to navigate the app, use its various features, and effectively score label utrasound frames. The manual is essential for both new users and those looking to maximize the app's potential. To access the manual, please refer to the documentation included in the repository by the name of PCOS Labeller Application Manual.
 
 ## Getting Started
 These instructions will guide you through setting up and running the app on your local machine.
@@ -20,7 +29,7 @@ These instructions will guide you through setting up and running the app on your
 #### (run these commands in the terminal)
 1. Clone the repository:
     ```bash
-    git clone https://github.com/misahub2023/AI-KODA.git
+    git clone https://github.com/misahub2023/FEM-LABELLER.git
     ```
 2. Update flutter and its dependencies: 
     ```bash
@@ -64,12 +73,12 @@ These instructions will guide you through setting up and running the app on your
 
 ## Files Structure And their purpose
 + android/
-    + [app/](https://github.com/Manya-15/AI-KODA/tree/main/android/app) 
+    + [app/](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/app) 
         + `src/` (Source files for different build variants)
             + `debug/` 
                 + `AndroidManifest.xml` (The manifest file for the debug build variant, specifying application metadata, permissions, and components)
             + `main/` (Source files for the main build variant)
-                + `kotlin/com/example/koda_new_res/`
+                + `kotlin/com/example/ultasound/`
                     + `MainActivity.kt` (The main entry point for the Android application written in Kotlin)
                 + `res/` (Resource files for the app, one can modify the launch screeen backgroud using multiple options available in this folder)
                     + `drawable-v21/` (Drawable resources for API level 21 and above, one can modify the launch screeen backgroud using multiple options available in this directory)
@@ -83,21 +92,21 @@ These instructions will guide you through setting up and running the app on your
                 + `AndroidManifest.xml`
         + `build.gradle` (Build configuration file for the app module, specifying dependencies, plugins, and build settings)
         + `google-services.json` (Configuration file for Firebase, containing API keys and project identifiers)
-    + [gradle/wrapper/](https://github.com/Manya-15/AI-KODA/tree/main/android/gradle/wrapper) (Contains Gradle wrapper files to ensure a specific version of Gradle is used)
+    + [gradle/wrapper/](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/gradle/wrapper) (Contains Gradle wrapper files to ensure a specific version of Gradle is used)
         + `gradle-wrapper.properties` (Specifies properties for the Gradle wrapper, such as the Gradle distribution URL)
-    + [build.gradle](https://github.com/Manya-15/AI-KODA/tree/main/android/build.gradle) (Top-level build configuration file for the project, specifying project-wide dependencies and build settings)
-    + [gradle.properties](https://github.com/Manya-15/AI-KODA/tree/main/android/gradle.properties) (Specifies properties for the Gradle build system, such as JVM options and project properties)
-    + [koda_new_res_android.iml](https://github.com/Manya-15/AI-KODA/tree/main/android/koda_new_res_android.iml) (IntelliJ IDEA module file for the project)
-    + `[settings.gradle](https://github.com/Manya-15/AI-KODA/tree/main/android/settings.gradle) (Specifies the Gradle settings for the project, including module names and build configurations)
+    + [build.gradle](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/build.gradle) (Top-level build configuration file for the project, specifying project-wide dependencies and build settings)
+    + [gradle.properties](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/gradle.properties) (Specifies properties for the Gradle build system, such as JVM options and project properties)
+    + [ultrasound_android.iml](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/ultasound_android.iml) (IntelliJ IDEA module file for the project)
+    + `[settings.gradle](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/settings.gradle) (Specifies the Gradle settings for the project, including module names and build configurations)
 
 + ios/
-    + [Flutter/](https://github.com/Manya-15/AI-KODA/tree/main/ios/Flutter) (This folder contains Flutter-specific files that are automatically generated and managed by the Flutter framework)
+    + [Flutter/](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/Flutter) (This folder contains Flutter-specific files that are automatically generated and managed by the Flutter framework)
         + `AppFrameworkInfo.plist` (contains metadata about the Flutter framework)
-    + [Runner.xcodeproj/](https://github.com/Manya-15/AI-KODA/tree/main/ios/Runner.xcodeproj) (This folder contains the Xcode project files for your IOS app)
+    + [Runner.xcodeproj/](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/Runner.xcodeproj) (This folder contains the Xcode project files for your IOS app)
         + `project.pbxproj` (project file that describes the targets, build configurations, and file references for your Xcode project)
-    +  [Runner.xcworkspace/](https://github.com/Manya-15/AI-KODA/tree/main/ios/Runner.xcworkspace) (This folder contains the workspace settings for your Xcode project)
+    +  [Runner.xcworkspace/](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/Runner.xcworkspace) (This folder contains the workspace settings for your Xcode project)
         + `contents.xcworkspacedata.xml` (ile defines the structure of your Xcode workspace, including references to your project and any dependencies)
-    + [Runner/](https://github.com/Manya-15/AI-KODA/tree/main/ios/Runner) (This folder contains the main iOS project files, including the app's source code, assets, and configurations)
+    + [Runner/](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/Runner) (This folder contains the main iOS project files, including the app's source code, assets, and configurations)
         + `Assets.xcassets/` (This folder contains the app's image assets, such as icons and launch images)
             + `AppIcon.appiconset/`
                 +  `Contents.json` (A JSON file that describes the structure and properties of the icon set)
@@ -110,20 +119,19 @@ These instructions will guide you through setting up and running the app on your
         + `AppDelegate.swift` (This file contains the entry point for the iOS app and handles app lifecycle events)
         + `GoogleService-Info.plist` (This file contains configuration information for Firebase, including API keys and project identifiers)
         + `Info.plist` (contains configuration settings for the iOS app, such as app permissions, icons, and other metadata)
-    + [Podfile](https://github.com/Manya-15/AI-KODA/tree/main/ios/Podfile) (This file is used by CocoaPods to manage your app's dependencies)
-    + [firebase_app_id_file.json](https://github.com/Manya-15/AI-KODA/tree/main/ios/firebase_app_id_file.json) (This file contains your Firebase project configuration, including your Firebase app ID and other settings)
-+ [assets/](https://github.com/Manya-15/AI-KODA/tree/main/assets) (This folder contains images used in the app) 
+    + [Podfile](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/Podfile) (This file is used by CocoaPods to manage your app's dependencies)
+    + [firebase_app_id_file.json](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/firebase_app_id_file.json) (This file contains your Firebase project configuration, including your Firebase app ID and other settings)
++ [assets/](https://github.com/Manya-15/FEM-LABELLER/tree/main/assets) (This folder contains images used in the app) 
 + lib/
-    + [auth/](https://github.com/Manya-15/AI-KODA/tree/main/lib/auth) (Contains authentication-related screens and logic)
-    + [models/](https://github.com/Manya-15/AI-KODA/tree/main/lib/model) (Data models used across the app)
-    + [screen/](https://github.com/Manya-15/AI-KODA/tree/main/lib/screen) (Contains the primary screens of the app)
-        + `koda_manual/` (Screens related to the KODA training module)
-    + [services/](https://github.com/Manya-15/AI-KODA/tree/main/lib/services) (Backend services and API handling)
-    + [utils/](https://github.com/Manya-15/AI-KODA/tree/main/lib/utils) (Utility functions and widgets)
-    + [firebase_options.dart](https://github.com/Manya-15/AI-KODA/tree/main/lib/firebase_options.dart) (Configuration file for Firebase initialization and setup)
-    + [main.dart](https://github.com/Manya-15/AI-KODA/tree/main/lib/main.dart) (The entry point of the Flutter application)
+    + [auth/](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/auth) (Contains authentication-related screens and logic)
+    + [models/](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/model) (Data models used across the app)
+    + [screen/](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/screen) (Contains the primary screens of the app)
+    + [services/](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/services) (Backend services and API handling)
+    + [utils/](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/utils) (Utility functions and widgets)
+    + [firebase_options.dart](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/firebase_options.dart) (Configuration file for Firebase initialization and setup)
+    + [main.dart](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/main.dart) (The entry point of the Flutter application)
 + test/
-    + [widget_test.dart](https://github.com/Manya-15/AI-KODA/tree/main/test/widget_test.dart) (File for testing the widgets of the app)
+    + [widget_test.dart](https://github.com/Manya-15/FEM-LABELLER/tree/main/test/widget_test.dart) (File for testing the widgets of the app)
 
 #### This application is developed for android devices so for IOS supported app, one must modify the files in `ios` folder according to the details of each file mentioned above.
 ## Contributing
