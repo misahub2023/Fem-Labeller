@@ -1,7 +1,7 @@
 # Fem-Labeller Flutter Application
 
 ## Project Overview
-The FEM Labeller application is a simple and user-friendly tool designed for gynecologists to label ultrasound frames efficiently. Its primary objective is to collect medically validated ultrasound data of the female reproductive system to develop AI models for detecting abnormalities. By automating the annotation process in real-time, the application saves time and generates a large, annotated dataset, facilitating the development of robust AI models for abnormality detection in both routine and clinical settings.
+The Femable (FEM) Labeller application is a simple and user-friendly tool designed for gynecologists to label ultrasound frames efficiently. Its primary objective is to collect medically validated ultrasound data of the female reproductive system to develop AI models for detecting abnormalities. By automating the annotation process in real-time, the application saves time and generates a large, annotated dataset, facilitating the development of robust Artificial Intelligence (AI) models for abnormality classification in both routine and clinical settings.
 
 The application consisted of a secure login system, profle setup, and the labeller module. 
 
@@ -142,8 +142,8 @@ These instructions will guide you through setting up and running the app on your
 5. Create a new Pull Request.
 
 ## Credits
-The idea of the application was developed by 
+The idea of the application was developed by Dr. Palak Handa, Dr. Nidhi Goel, and executed by Ms. Nikita Garg. Dr. Nishi Choudhary from the Department of Obstetrics and Gynecology, Lady
+Hardinge Medical College, Delhi, India used the application and participated in annotating the ultrasound frames. Authors are thankful to Ms. Manya Joshi for helping in the development of the GitHub repository.
 
-##  References
-This application was first conceptualized and detailed in the following articles.
+
 
