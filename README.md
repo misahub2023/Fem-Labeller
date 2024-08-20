@@ -4,7 +4,8 @@
 The Female (FEM) Labeller is a flutter based application which is a simple and user-friendly tool designed for gynecologists to label ultrasound frames efficiently. Its primary objective is to collect medically validated ultrasound data of the female reproductive system to develop AI models for detecting abnormalities. By automating the annotation process in real-time, the application saves time and generates a large, annotated dataset, facilitating the development of robust Artificial Intelligence (AI) models for abnormality classification in both routine and clinical settings.
 
 The application consisted of a secure login system, profle setup, and the labeller module. 
-![](https://github.com/misahub2023/FEM-LABELLER/blob/main/assets/readme asset.jpg)
+
+![](readme_asset.jpg)
 
 For each ultrasound frame, there are 3 questions i.e., whether the ultrasound has an abnormality or not, what label(s) can be given to the frame and lastly what all organs are visible in that frame. For each of the question, multiple options were given to the users where-in the first question was single choice while other two are multi choice.
 
@@ -74,7 +75,7 @@ These instructions will guide you through setting up and running the app on your
 
 ## Files Structure And their purpose
 + android/
-    + [app/](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/app) 
+    + [app/](android/app) 
         + `src/` (Source files for different build variants)
             + `debug/` 
                 + `AndroidManifest.xml` (The manifest file for the debug build variant, specifying application metadata, permissions, and components)
@@ -93,21 +94,21 @@ These instructions will guide you through setting up and running the app on your
                 + `AndroidManifest.xml`
         + `build.gradle` (Build configuration file for the app module, specifying dependencies, plugins, and build settings)
         + `google-services.json` (Configuration file for Firebase, containing API keys and project identifiers)
-    + [gradle/wrapper/](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/gradle/wrapper) (Contains Gradle wrapper files to ensure a specific version of Gradle is used)
+    + [gradle/wrapper/](android/gradle/wrapper) (Contains Gradle wrapper files to ensure a specific version of Gradle is used)
         + `gradle-wrapper.properties` (Specifies properties for the Gradle wrapper, such as the Gradle distribution URL)
-    + [build.gradle](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/build.gradle) (Top-level build configuration file for the project, specifying project-wide dependencies and build settings)
-    + [gradle.properties](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/gradle.properties) (Specifies properties for the Gradle build system, such as JVM options and project properties)
-    + [ultrasound_android.iml](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/ultasound_android.iml) (IntelliJ IDEA module file for the project)
-    + `[settings.gradle](https://github.com/Manya-15/FEM-LABELLER/tree/main/android/settings.gradle) (Specifies the Gradle settings for the project, including module names and build configurations)
+    + [build.gradle](android/build.gradle) (Top-level build configuration file for the project, specifying project-wide dependencies and build settings)
+    + [gradle.properties](android/gradle.properties) (Specifies properties for the Gradle build system, such as JVM options and project properties)
+    + [ultrasound_android.iml](android/ultasound_android.iml) (IntelliJ IDEA module file for the project)
+    + `[settings.gradle](android/settings.gradle) (Specifies the Gradle settings for the project, including module names and build configurations)
 
 + ios/
-    + [Flutter/](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/Flutter) (This folder contains Flutter-specific files that are automatically generated and managed by the Flutter framework)
+    + [Flutter/](ios/Flutter) (This folder contains Flutter-specific files that are automatically generated and managed by the Flutter framework)
         + `AppFrameworkInfo.plist` (contains metadata about the Flutter framework)
-    + [Runner.xcodeproj/](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/Runner.xcodeproj) (This folder contains the Xcode project files for your IOS app)
+    + [Runner.xcodeproj/](ios/Runner.xcodeproj) (This folder contains the Xcode project files for your IOS app)
         + `project.pbxproj` (project file that describes the targets, build configurations, and file references for your Xcode project)
-    +  [Runner.xcworkspace/](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/Runner.xcworkspace) (This folder contains the workspace settings for your Xcode project)
+    +  [Runner.xcworkspace/](ios/Runner.xcworkspace) (This folder contains the workspace settings for your Xcode project)
         + `contents.xcworkspacedata.xml` (ile defines the structure of your Xcode workspace, including references to your project and any dependencies)
-    + [Runner/](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/Runner) (This folder contains the main iOS project files, including the app's source code, assets, and configurations)
+    + [Runner/](ios/Runner) (This folder contains the main iOS project files, including the app's source code, assets, and configurations)
         + `Assets.xcassets/` (This folder contains the app's image assets, such as icons and launch images)
             + `AppIcon.appiconset/`
                 +  `Contents.json` (A JSON file that describes the structure and properties of the icon set)
@@ -120,19 +121,19 @@ These instructions will guide you through setting up and running the app on your
         + `AppDelegate.swift` (This file contains the entry point for the iOS app and handles app lifecycle events)
         + `GoogleService-Info.plist` (This file contains configuration information for Firebase, including API keys and project identifiers)
         + `Info.plist` (contains configuration settings for the iOS app, such as app permissions, icons, and other metadata)
-    + [Podfile](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/Podfile) (This file is used by CocoaPods to manage your app's dependencies)
-    + [firebase_app_id_file.json](https://github.com/Manya-15/FEM-LABELLER/tree/main/ios/firebase_app_id_file.json) (This file contains your Firebase project configuration, including your Firebase app ID and other settings)
-+ [assets/](https://github.com/Manya-15/FEM-LABELLER/tree/main/assets) (This folder contains images used in the app) 
+    + [Podfile](ios/Podfile) (This file is used by CocoaPods to manage your app's dependencies)
+    + [firebase_app_id_file.json](ios/firebase_app_id_file.json) (This file contains your Firebase project configuration, including your Firebase app ID and other settings)
++ [assets/](assets) (This folder contains images used in the app) 
 + lib/
-    + [auth/](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/auth) (Contains authentication-related screens and logic)
-    + [models/](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/model) (Data models used across the app)
-    + [screen/](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/screen) (Contains the primary screens of the app)
-    + [services/](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/services) (Backend services and API handling)
-    + [utils/](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/utils) (Utility functions and widgets)
-    + [firebase_options.dart](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/firebase_options.dart) (Configuration file for Firebase initialization and setup)
-    + [main.dart](https://github.com/Manya-15/FEM-LABELLER/tree/main/lib/main.dart) (The entry point of the Flutter application)
+    + [auth/](lib/auth) (Contains authentication-related screens and logic)
+    + [models/](lib/model) (Data models used across the app)
+    + [screen/](lib/screen) (Contains the primary screens of the app)
+    + [services/](lib/services) (Backend services and API handling)
+    + [utils/](lib/utils) (Utility functions and widgets)
+    + [firebase_options.dart](lib/firebase_options.dart) (Configuration file for Firebase initialization and setup)
+    + [main.dart](lib/main.dart) (The entry point of the Flutter application)
 + test/
-    + [widget_test.dart](https://github.com/Manya-15/FEM-LABELLER/tree/main/test/widget_test.dart) (File for testing the widgets of the app)
+    + [widget_test.dart](test/widget_test.dart) (File for testing the widgets of the app)
 
 #### This application is developed for android devices so for IOS supported app, one must modify the files in `ios` folder according to the details of each file mentioned above.
 ## Contributing
