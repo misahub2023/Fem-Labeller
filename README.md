@@ -4,6 +4,7 @@
 The Female (FEM) Labeller is a flutter based application which is a simple and user-friendly tool designed for gynecologists to label ultrasound frames efficiently. Its primary objective is to collect medically validated ultrasound data of the female reproductive system to develop AI models for detecting abnormalities. By automating the annotation process in real-time, the application saves time and generates a large, annotated dataset, facilitating the development of robust Artificial Intelligence (AI) models for abnormality classification in both routine and clinical settings.
 
 The application consisted of a secure login system, profle setup, and the labeller module. 
+![](https://github.com/misahub2023/FEM-LABELLER/blob/main/assets/readme asset.jpg)
 
 For each ultrasound frame, there are 3 questions i.e., whether the ultrasound has an abnormality or not, what label(s) can be given to the frame and lastly what all organs are visible in that frame. For each of the question, multiple options were given to the users where-in the first question was single choice while other two are multi choice.
 
