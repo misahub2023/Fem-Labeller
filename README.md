@@ -16,7 +16,7 @@ In the back-end, time taken to analyse each frame is recorded and for each selec
 
 
 ## FEM Labeller Application Manual
-The **FEM Labeller Application Manual** is a comprehensive guide designed to help users understand the functionality of the FEM-Labeller app. It provides detailed instructions on how to navigate the app, use its various features, and effectively score label utrasound frames. The manual is essential for both new users and those looking to maximize the app's potential. To access the manual, please refer to the documentation included in the repository by the name of PCOS Labeller Application Manual.
+The **FEM Labeller Application Manual** is a comprehensive guide designed to help users understand the functionality of the FEM-Labeller app. It provides detailed instructions on how to navigate the app, use its various features, and effectively score label utrasound frames. The manual is essential for both new users and those looking to maximize the app's potential. To access the manual, please refer to the documentation included in the repository by the name of Application Manual.
 
 ## Getting Started
 These instructions will guide you through setting up and running the app on your local machine.
